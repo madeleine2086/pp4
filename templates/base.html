@@ -17,13 +17,13 @@
 <body>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">BeWell</a>
+        <a class="navbar-brand" href="{% url 'home' %}">BeWell</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
-            <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link active" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
             <a class="nav-item nav-link" href="#">About</a>
             <a class="nav-item nav-link" href="#">Log in</a>
             <a class="nav-item nav-link" href="#">Register</a>
@@ -50,7 +50,7 @@
           data-mdb-ripple-init
             class="btn text-white btn-floating m-1"
             style="background-color: #3b5998;"
-            href="https://facebook.com"
+            href="https://facebook.com" target="_blank"
             role="button"
             ><i class="fab fa-facebook-f"></i
           ></a>
@@ -60,7 +60,7 @@
             data-mdb-ripple-init
             class="btn text-white btn-floating m-1"
             style="background-color: #55acee;"
-            href="https://twitter.com"
+            href="https://twitter.com" target="_blank"
             role="button"
             ><i class="fab fa-twitter"></i
           ></a>    
@@ -70,7 +70,7 @@
             data-mdb-ripple-init
             class="btn text-white btn-floating m-1"
             style="background-color: #ac2bac;"
-            href="https://instagram.com"
+            href="https://instagram.com" target="_blank"
             role="button"
             ><i class="fab fa-instagram"></i
           ></a>
