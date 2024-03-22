@@ -1,6 +1,10 @@
 {% load static %}
+
 {% url 'home' as home_url %}
 {% url 'about' as about_url %}
+{% url 'account_login' as login_url %}
+{% url 'account_signup' as signup_url %}
+{% url 'account_logout' as logout_url %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -18,7 +22,8 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="{% url 'home' %}">BeWell</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
@@ -27,8 +32,15 @@
             {% if request.path == home_url %}active{%endif%}" aria-current="page" href="{% url 'home' %}">Home</a>
             <a class="nav-item nav-link
             {% if request.path == about_url %}active{%endif%}" aria-current="page" href="{% url 'about' %}">About</a>
-            <a class="nav-item nav-link" aria-current="page" href="#">Log in</a>
-            <a class="nav-item nav-link" aria-current="page" href="#">Register</a>
+            {% if user.is_authenticated %}
+            <a class="nav-link {% if request.path == logout_url %}active{% endif %}" aria-current="page" 
+                href="{% url 'account_logout' %}">Logout</a>
+            {% else %}
+            <a class="nav-item nav-link {% if request.path == login_url %}active{% endif %}"
+               aria-current="page" href="{% url 'account_login' %}">Log in</a>
+            <a class="nav-item nav-link {% if request.path == signup_url %}active{% endif %}" 
+                aria-current="page" href="{% url 'account_signup' %}">Register</a>
+            {% endif %}
           </div>
         </div>
       </nav>
@@ -40,8 +52,8 @@
         {% endblock content %}
 
     </main>
-
-    <!-- Footer -->
+    
+    <!-- Bootstrap Footer -->
     <footer class="bg-body-tertiary text-center">
       <!-- Grid container -->
       <div class="container p-4 pb-0">
