@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<div class="bg-image ml-2 mr-2" id="background-pic">
+    <div class="container ml-0 background-white">
+        <div class="col">
+            <div class="col-6 text-black">
+            <!-- Title goes between these h2 tags -->
+            <h2>{{ about.title }}</h2>
+            <!-- Content goes directly underneath this -->
+            <p class="text-black">{{ about.content | safe }}</p>
+            </div>
+        </div>
+        <div class="col">
+            <div class="col text-left">
+            <!-- Updated on field goes in here -->
+
+            <p class="text-end"><em>Updated on: {{ about.updated_on }}</em></p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}
