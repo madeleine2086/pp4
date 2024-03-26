@@ -1,47 +1,55 @@
-
-
-.masthead {
-    margin-top: 10px;
-    overflow: hidden;
-    position: relative;
-    display: inline-block;
-    height: 33vh;
-    width: 100%;
-}
-
-.masthead-text {
-    background-color: #445261;
-    color: white;
-    position: relative;
-}
-
-.masthead-image {
-    position: relative;
-    overflow: hidden;
-    max-width: fit-content;
-}
-
-/* "About" styles - Bootstrap */
-
-.background-white {
-    background-image: linear-gradient(to left, rgba(250,250,250,0), rgba(255,250,250,1));
-}
-
-#background-pic {
-    background-image: url(../images/nature1.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
 body {
-    background-color: #F9FAFC;;
+    background-color: whitesmoke;
+}
+
+#bg-pic {
+    background-color: silver;
+}
+
+.img-overlay {
+    background-image: linear-gradient(to left, rgba(250,250,250,0), rgba(255,250,250,0.8), rgba(255,250,250,1));
+}
+
+.scale {
+    width: 100%;
+    height: auto;
+}
+
+.post-link {
+    text-decoration: none;
+    color: #373938;
+}
+
+.post-link:hover,
+.page-link {
+    color: #5d9857;
+}
+
+.btn-signup,
+.btn-edit {
+    background-color: #8d9292;
+    color: #fff;
+    border-color:#2d3636;
+}
+
+.btn-signup:hover,
+.btn-signup:active {
+    background-color: #363535;
+    color: #fefefe;
+    
 }
 
 /* Responsive styling */
 
-@media (max-width: 532px) {
-    #background-pic {
-        background-image: none;
-        background-color: beige;
+/* Media query for large or landscape phones (576px and up) */
+@media screen and (min-width: 576px) {
+    #bg-pic {
+        background-image: url(../images/nature1.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-bottom: 0;
     }
+
+
 }
+
