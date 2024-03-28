@@ -4,10 +4,22 @@ from cloudinary.models import CloudinaryField
 
 STATUS = ((0, "Draft"), (1, "Published"))
 
+class Category(models.Model):
+    """
+    Category Model
+    """
+    class Meta:
+        verbose_name_plural = 'Categories'
+    name = models.CharField(max_length=30, unique=True)
+   
+    def __str__(self):
+        return self.name
+
 # Post Model
 
 class Post(models.Model):
     title = models.CharField(max_length=250, unique=True)
+    category = models.ForeignKey(Category, on_delete=models.PROTECT, default=4)
     slug = models.SlugField(max_length=200, unique=True)
     author = models.ForeignKey(
     User, on_delete=models.CASCADE, related_name="blog_posts"
