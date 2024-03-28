@@ -3,7 +3,7 @@ from django.views import generic
 from django.views.generic import ListView
 from django.contrib import messages
 from django.http import HttpResponseRedirect
-from .models import Post, Comment
+from .models import Post, Comment, Category
 from .forms import CommentForm
 
 # Create your views here.
@@ -99,5 +99,10 @@ class CatListView(ListView):
         return content
 
 
-
+def category_list(request):
+    category_list = Category.objects.exclude(name='other')
+    context = {
+        "category_list": category_list,
+    }
+    return context
 
