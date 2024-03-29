@@ -2,6 +2,10 @@ body {
     background-color: whitesmoke;
 }
 
+.light {
+    background-color: #dbd7d2;
+}
+
 #bg-pic {
     background-color: silver;
 }

@@ -21,7 +21,7 @@
 </head>
 <body class="d-flex flex-column min-vh-100">
     <!-- Navigation -->
-      <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: #dbd7d2;">
+      <nav class="navbar navbar-expand-md navbar-light fixed-top mb-auto" style="background-color: #dbd7d2;">
         <a class="navbar-brand" href="{% url 'home' %}">BeWell Blog | Calm Your Mind </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -41,7 +41,7 @@
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Categories
               </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <div class="dropdown-menu light" aria-labelledby="navbarDropdown">
                 {% for category in category_list %}
                   <a class="dropdown-item" href="/category/{{ category.name}}">
                   {{ category.name|title }}
@@ -63,7 +63,7 @@
     </nav>
    
     <!-- displaying Django messages -->
-    <div class="container">
+    <div class="container mb-auto">
       <div class="row">
         <div class="col-md-8 offset-md-2">
           {% for message in messages %}
@@ -78,11 +78,11 @@
       </div>
     </div>
 
-    <main class="flex-shrink-0 main-bg mb-auto">
+    <main class="flex-shrink-0 main-bg mb-auto mt-3">
       {% if user.is_authenticated %}
-      <p class="text-end m-3">You are logged in as {{ user }}</p>
+      <p class="text-end mt-3">You are logged in as {{ user }}</p>
       {% else %}
-      <p class="text-end m-3">You are not logged in</p>
+      <p class="text-end mt-3">You are not logged in</p>
       {% endif %}
 
       {% block content %}
