@@ -1,5 +1,11 @@
+/* Default styling */
+
 body {
     background-color: whitesmoke;
+}
+
+.light {
+    background-color: #dbd7d2;
 }
 
 #bg-pic {
@@ -15,6 +21,20 @@ body {
     height: auto;
 }
 
+/* Messaging */
+
+.flash-msg {
+    position: fixed;
+    z-index: 1010;
+    top: 3rem;
+    right: 1rem;
+    left: 1rem;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+/* Page navigation styling */
+
 .post-link {
     text-decoration: none;
     color: #373938;
@@ -24,6 +44,8 @@ body {
 .page-link {
     color: #5d9857;
 }
+
+/* Buttons styling */
 
 .btn-signup,
 .btn-edit {

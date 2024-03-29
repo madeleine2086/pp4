@@ -1,3 +1,5 @@
+/* Default styling */
+
 body {
     background-color: whitesmoke;
 }
@@ -19,6 +21,8 @@ body {
     height: auto;
 }
 
+/* Messaging */
+
 .flash-msg {
     position: fixed;
     z-index: 1010;
@@ -29,6 +33,8 @@ body {
     margin-top: 1rem;
 }
 
+/* Page navigation styling */
+
 .post-link {
     text-decoration: none;
     color: #373938;
@@ -38,6 +44,8 @@ body {
 .page-link {
     color: #5d9857;
 }
+
+/* Buttons styling */
 
 .btn-signup,
 .btn-edit {
