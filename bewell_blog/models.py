@@ -6,7 +6,7 @@ STATUS = ((0, "Draft"), (1, "Published"))
 
 class Category(models.Model):
     """
-    Category Model
+    Model for Category
     """
     class Meta:
         verbose_name_plural = 'Categories'
@@ -15,9 +15,11 @@ class Category(models.Model):
     def __str__(self):
         return self.name
 
-# Post Model
 
 class Post(models.Model):
+    """
+    Model for Posts
+    """
     title = models.CharField(max_length=250, unique=True)
     category = models.ForeignKey(Category, on_delete=models.PROTECT, default=4)
     slug = models.SlugField(max_length=200, unique=True)
@@ -36,10 +38,12 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
-
-# Comment Model
+        
 
 class Comment(models.Model):
+    """
+    Model for Comments
+    """
     post = models.ForeignKey(
         Post, on_delete=models.CASCADE, related_name="comments")
     author = models.ForeignKey(
