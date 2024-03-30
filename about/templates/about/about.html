@@ -4,11 +4,12 @@
 <div class="bg-image ml-2 mr-2 mt-3" id="bg-pic">
     <div class="container ml-0 img-overlay font-settings">
         <div class="col">
-            <div class="col-sm-8 text-black">
-                <!-- Title goes between these h2 tags -->
-                <h2 class="mt-2">{{ about.title }}</h2>
-                <!-- Content goes directly underneath this -->
-                <article class="text-black">{{ about.content | safe }}</article>
+            <div class="col-sm-8 text-black">                             
+                <!-- Title and Content goes directly underneath this -->
+                <article class="text-black" style="font-size: 12px">
+                    <h2 class="mt-2">{{ about.title }}</h2>
+                    {{ about.content | safe }}
+                </article>
             </div>
         </div>
         <div class="col">
