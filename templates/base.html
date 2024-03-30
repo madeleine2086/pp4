@@ -12,11 +12,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Google Fonts CSS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,
-          100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,
-          500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap" rel="stylesheet">
         <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" 
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -42,37 +40,37 @@
             <li class="nav-item">
               <a class="nav-link
                 {% if request.path == about_url %}active{%endif%}" aria-current="page" href="{% url 'about' %}">About</a>
-              </li>
-              <li class="nav-item dropdown">
+            </li>
+            <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Categories
                 </a>
                 <div class="dropdown-menu light" aria-labelledby="navbarDropdownMenuLink">
                   {% for category in category_list %}
-                    <a class="dropdown-item" href="/category/{{ category.name}}">
+                  <a class="dropdown-item" href="/category/{{ category.name}}">
                     {{ category.name|title }}
-                    </a>
+                  </a>
                   {% endfor %}
                 </div>
-              </li>
-              <li>
+            </li>
+            <li>
                 {% if user.is_authenticated %}
-                <a class="nav-link {% if request.path == logout_url %}active{% endif %}" aria-current="page" 
+                <a class="nav-link {% if request.path == logout_url %}active" aria-current="page{% endif %}" 
                     href="{% url 'account_logout' %}">Logout</a>
-              </li>
+            </li>
               {% else %}
-              <li>            
-                <a class="nav-item nav-link {% if request.path == login_url %}active{% endif %}"
-                  aria-current="page" href="{% url 'account_login' %}">Login</a>
-              </li>
-              <li>
-                <a class="nav-item nav-link {% if request.path == signup_url %}active{% endif %}" 
-                    aria-current="page" href="{% url 'account_signup' %}">Register</a>
-              </li>
+            <li>            
+                <a class="nav-item nav-link {% if request.path == login_url %}active"
+                    aria-current="page{% endif %}" href="{% url 'account_login' %}">Login</a>
+            </li>
+            <li>
+                <a class="nav-item nav-link {% if request.path == signup_url %}active" 
+                    aria-current="page{% endif %}" href="{% url 'account_signup' %}">Register</a>
+            </li>
               {% endif %}
           </ul>
         </div>
-    </nav>
+      </nav>
    
     <!-- displaying Django messages -->
     <div class="container mt-6">
