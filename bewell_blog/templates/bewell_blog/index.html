@@ -12,11 +12,11 @@
                 <div class="card-body">
                     <div class="image-container">
                         {% if "placeholder" in post.featured_image.url %}
-                        <img class="card-img-top" src="{% static 'images/nature1.jpg' %}"
-                            width="50%" alt="placeholder image">
+                        <img class="card-img-top placeholder-image" src="{% static 'images/nature1.jpg' %}"
+                             alt="placeholder image">
                         {% else %}
-                        <img class="card-img-top" src=" {{ post.featured_image.url }}"
-                            width="50%" alt="{{ post.title }}">
+                        <img class="card-img-top  placeholder-image" src=" {{ post.featured_image.url }}"
+                             alt="{{ post.title }}">
                         {% endif %}
                         <div class="image-flash">
                             <p class="author">Author: {{ post.author }}</p>
@@ -27,7 +27,7 @@
                         <p class="card-text">{{ post.excerpt }}</p>
                     </a>
 
-                    <hr />
+                    <hr>
                     <p class="card-text text-muted h6">{{ post.created_on}}
                     </p>
                 </div>

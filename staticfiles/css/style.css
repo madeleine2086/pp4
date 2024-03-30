@@ -21,6 +21,10 @@ body {
     height: auto;
 }
 
+.placeholder-image {
+    width: 50%;
+}
+
 /* Messaging */
 
 .flash-msg {
