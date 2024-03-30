@@ -2,13 +2,13 @@
 {% block content %}
 {% load static %}
 <div class="bg-image ml-2 mr-2 mt-3" id="bg-pic">
-    <div class="container ml-0 img-overlay">
+    <div class="container ml-0 img-overlay font-settings">
         <div class="col">
             <div class="col-sm-8 text-black">
-            <!-- Title goes between these h2 tags -->
-            <h2 class="mt-2">{{ about.title }}</h2>
-            <!-- Content goes directly underneath this -->
-            <p class="text-black">{{ about.content | safe }}</p>
+                <!-- Title goes between these h2 tags -->
+                <h2 class="mt-2">{{ about.title }}</h2>
+                <!-- Content goes directly underneath this -->
+                <p class="text-black">{{ about.content | safe }}</p>
             </div>
         </div>
         <div class="col">
