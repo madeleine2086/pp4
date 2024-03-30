@@ -20,24 +20,13 @@ A live version of the site can be found <a href="https://be-well-cfafe5a26052.he
    - [Colours](#colours)
    - [Media](#media)
    - [Database](#database)
-   - [Wireframes](#wireframes)
+
 - [Features](#features)
    - [Homepage](#homepage)
    - [Navigation Desktop](#navigation-desktop)
    - [Navigation Mobile](#navigation-mobile)
-   - [Post Details](#post-details)
-   - [Cocktail Recipe Sidebar](#cocktail-recipe-sidebar)
-   - [Liked Cocktails](#liked-cocktails)
-   - [All Cocktails](#all-cocktails)
-   - [Categories](#categories)
-   - [Filter Categories](#filter-cocktails)
-   - [Search Results](#search-results)
-   - [Admin Frontend](#admin-frontend)
-   - [Future Features](#future-features)
 - [Technologies](#technologies)
-   - [Languages](#languages)
-   - [Django Packages](#django-packages)
-   - [Frameworks & Libraries](#frameworks)
+   
 - [Development & Testing](#testing)
    - [Database](#database)
    - [Manual Tests](TESTING.md)
@@ -114,12 +103,7 @@ Bootstrap 5 native font stack was utilised.
 
 <h2 id="database">Database Diagram</h2>
 
-
-
-<h2 id="wireframes">Wireframes</h2>
-
-Wireframes
-
+<img src="documentation/images/messages/diagram-data-2.png">
 
 
 
