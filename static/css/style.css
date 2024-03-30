@@ -4,18 +4,6 @@ body {
     background-color: whitesmoke;
 }
 
-p
-ul
-li {
-    font-family: 'Times New Roman', Times, serif, sans-serif;
-    font-size: 20px;
-}
-
-.font-settings {
-    font-family: 'Times New Roman', Times, serif, sans-serif;
-    font-size: 20px;
-}
-
 .light {
     background-color: #dbd7d2;
 }
